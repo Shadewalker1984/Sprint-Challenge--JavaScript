@@ -108,6 +108,7 @@ for(let i=0; i < graduates.length; i++) {
   switch(graduates[i].university) { 
     case "Uni":
       unisWithUni.push(gradutes[i].university);
+      default:
 console.log(unisWithUni);
 
 
@@ -137,8 +138,8 @@ The zoos want to display both the scientific name and the animal name in front o
 */
 const displayNames = [];
 zooAnimals.forEach(function(zooAnimals) {
-  displayNames.push(zooAnimals.animal_name, zooAnimals.scientific_name)
-};
+  displayNames.push(`name: ${zooAnimals.animal_name}, Scientific: ${zooAnimals.scientific_name}`)
+});
 console.log(displayNames)
 
 /* Request 2: .map()
@@ -147,10 +148,11 @@ The zoos need a list of all their animal's names (animal_name only) converted to
 
 */
 
-  const lowCaseAnimalNames = [];
+const lowCaseAnimalNames = [];
   zooAnimals.map((zooAnimals) => {
     (zooAnimals.animal_name).toLowerCase();
-  }
+  });
+                 
   console.log(lowCaseAnimalNames);
 
 /* Request 3: .filter() 
@@ -164,7 +166,7 @@ zooAnimals.filter(zoo => {
   if (zooAnimals.population < 5) {
     lowPopulationAnimals.push(zooAnimals[i])
   };
-  };
+};
 console.log(lowPopulationAnimals);
 
 /* Request 4: .reduce() 
@@ -173,7 +175,7 @@ The zoos need to know their total animal population across the United States. Fi
 
 */
 const populationTotal = 0;
-let sum = zooAnimals.reduce(function (accum, num) {
+let pupulationTotal= zooAnimals.reduce(function (accum, num) {
   return accum + num.population;
 }, 0);
 
