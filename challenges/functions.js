@@ -40,7 +40,7 @@ function greeting(first, last) {
 
 // Explain in your own words why nestedfunction can access the variable internal.
 
-// Explanation:  Because nestedfunction is being called in it's own parent scope, is is creating a closure that can reach outer scopes of variables. 
+// Explanation:  Because nestedfunction is being called in it's own parent scope, is is creating a closure that can reach outer scopes of variables using a scope chain. 
 
 
 
